@@ -2,11 +2,8 @@
   "name": "myblog",
   "version": "1.0.0",
   "description": "Blog for Cloudflare Pages",
-  "main": "functions/[[path]].js",
   "scripts": {
-    "start": "node functions/[[path]].js",
-    "dev": "nodemon functions/[[path]].js",
-    "build": "if not exist public mkdir public && xcopy /s /e /y views public\\"
+    "build": "if not exist dist mkdir dist && xcopy /s /e /y public dist\\ && xcopy /s /e /y views dist\\"
   },
   "dependencies": {
     "express": "^4.18.2",
