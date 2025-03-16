@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Blog for Cloudflare Pages",
   "scripts": {
-    "build": "if not exist dist mkdir dist && xcopy /s /e /y public dist\\ && xcopy /s /e /y views dist\\"
+    "build": "mkdir -p dist && cp -r public/* dist/ && cp -r views/* dist/"
   },
   "dependencies": {
     "express": "^4.18.2",
